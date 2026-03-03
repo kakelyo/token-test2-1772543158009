@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Meta Tags -->
+    <title data-i18n="seo_title">test2 - Futuristic Web3 Launchpad</title>
+    <meta name="description" data-i18n="seo_description" content="test2 is a utility token built on high-strength encryption logic, powering privacy computing, asset rights, and on-chain security audits.">
+    <meta name="keywords" content="test2, crypto, web3, launchpad, token, BSC, blockchain, privacy, security">
+    <meta name="author" content="test2 Team">
+    <!-- OpenGraph Tags -->
+    <meta property="og:title" data-i18n="og_title" content="test2 - Futuristic Web3 Launchpad">
+    <meta property="og:description" data-i18n="og_description" content="test2 is a utility token built on high-strength encryption logic, powering privacy computing, asset rights, and on-chain security audits.">
+    <meta property="og:image" content="logo.png">
+    <meta property="og:url" content="https://yourwebsite.com"> <!-- IMPORTANT: Replace with your actual website URL -->
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" data-i18n="twitter_title" content="test2 - Futuristic Web3 Launchpad">
+    <meta name="twitter:description" data-i18n="twitter_description" content="test2 is a utility token built on high-strength encryption logic, powering privacy computing, asset rights, and on-chain security audits.">
+    <meta name="twitter:image" content="logo.png">
+
+    <style>
+        /* General Styles */
+        :root {
+            --primary-bg: #0a0a1a;
+            --secondary-bg: #1a1a2a;
+            --accent-color: #00f0ff; /* Cyan/Electric Blue */
+            --text-color: #e0e0e0;
+            --light-text-color: #a0a0a0;
+            --border-color: #333;
+            --gradient-start: #00f0ff;
+            --gradient-end: #8a2be2; /* Blue Violet */
+            --font-family: 'Segoe UI', 'Roboto', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #fff;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-color);
+            margin-bottom: 0.8em;
+            font-weight: 700;
+        }
+
+        h1 { font-size: 3em; }
+        h2 { font-size: 2.5em; }
+        h3 { font-size: 2em; }
+
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        section:not(:last-of-type) {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .flex-center { display: flex; justify-content: center; align-items: center; }
+        .flex-column { flex-direction: column; }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 8px;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            color: #fff;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 240, 255, 0.3);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 240, 255, 0.5);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--secondary-bg);
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        nav .logo img {
+            height: 40px; /* Adjust as needed */
+            vertical-align: middle;
+        }
+
+        nav .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        nav .nav-links li {
+            margin-left: 30px;
+        }
+
+        nav .nav-links a {
+            font-weight: 600;
+            font-size: 1.1em;
+            position: relative;
+            padding-bottom: 5px;
+        }
+
+        nav .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        nav .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .lang-switcher {
+            margin-left: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-switcher select {
+            background-color: var(--secondary-bg);
+            color: var(--text-color);
+            border: 1px solid var(--border-color);
+            padding: 8px 12px;
+            border-radius: 5px;
+            appearance: none; /* Remove default arrow */
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            cursor: pointer;
+            font-size: 0.9em;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+
+        .lang-switcher select:hover {
+            border-color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        #hero {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(0, 240, 255, 0.1) 0%, rgba(138, 43, 226, 0.1) 30%, transparent 70%);
+            padding-top: 120px; /* Account for sticky header */
+        }
+
+        #hero h1 {
+            font-size: 4.5em;
+            margin-bottom: 0.2em;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 15px rgba(0, 240, 255, 0.5);
+        }
+
+        #hero p {
+            font-size: 1.5em;
+            max-width: 800px;
+            margin-bottom: 2em;
+            color: var(--light-text-color);
+        }
+
+        /* About Section */
+        #about .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #about .about-text {
+            flex: 2;
+            min-width: 300px;
+            max-width: 700px;
+        }
+
+        #about .about-text h2 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #about .about-text p {
+            font-size: 1.1em;
+            margin-bottom: 1em;
+            color: var(--light-text-color);
+        }
+
+        #about .about-features {
+            flex: 1;
+            min-width: 250px;
+            background-color: var(--secondary-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+        }
+
+        #about .about-features h3 {
+            font-size: 1.8em;
+            margin-bottom: 1em;
+            color: var(--accent-color);
+        }
+
+        #about .about-features ul {
+            list-style: none;
+        }
+
+        #about .about-features li {
+            margin-bottom: 15px;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1em;
+        }
+
+        #about .about-features li::before {
+            content: '⚡'; /* Futuristic bullet point */
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+            font-size: 1.2em;
+            line-height: 1;
+        }
+
+        /* Tokenomics Section */
+        #tokenomics {
+            text-align: center;
+        }
+
+        #tokenomics h2 {
+            font-size: 3em;
+            margin-bottom: 1em;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #tokenomics .token-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        #tokenomics .token-info-item {
+            background-color: var(--secondary-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.1);
+            text-align: left;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #tokenomics .token-info-item::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            width: 30px;
+            height: 30px;
+            background: var(--accent-color);
+            transform: rotate(45deg);
+            opacity: 0.1;
+        }
+
+        #tokenomics .token-info-item h3 {
+            font-size: 1.5em;
+            color: var(--accent-color);
+            margin-bottom: 0.5em;
+        }
+
+        #tokenomics .token-info-item p {
+            font-size: 1.1em;
+            color: var(--light-text-color);
+        }
+
+        #tokenomics .token-info-item span {
+            display: block;
+            font-size: 1.3em;
+            font-weight: bold;
+            color: var(--text-color);
+            margin-top: 5px;
+        }
+
+        /* Roadmap Section */
+        #roadmap {
+            text-align: center;
+        }
+
+        #roadmap h2 {
+            font-size: 3em;
+            margin-bottom: 1em;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #roadmap .roadmap-timeline {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding: 40px 0;
+        }
+
+        #roadmap .roadmap-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 2px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--gradient-start), var(--gradient-end));
+            transform: translateX(-50%);
+        }
+
+        .roadmap-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            width: 100%;
+            max-width: 800px;
+            position: relative;
+        }
+
+        .roadmap-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .roadmap-item .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            box-shadow: 0 0 15px var(--accent-color);
+        }
+
+        .roadmap-item .timeline-content {
+            background-color: var(--secondary-bg);
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 0 20px rgba(0, 240, 255, 0.1);
+            width: calc(50% - 40px); /* Adjust for dot and gap */
+            text-align: left;
+        }
+
+        .roadmap-item:nth-child(odd) .timeline-content {
+            margin-right: 40px;
+        }
+
+        .roadmap-item:nth-child(even) .timeline-content {
+            margin-left: 40px;
+        }
+
+        .roadmap-item h3 {
+            color: var(--accent-color);
+            font-size: 1.6em;
+            margin-bottom: 0.5em;
+        }
+
+        .roadmap-item p {
+            color: var(--light-text-color);
+            font-size: 1.05em;
+        }
+
+        /* Social Links Section */
+        #social-links {
+            text-align: center;
+            padding-bottom: 100px;
+        }
+
+        #social-links h2 {
+            font-size: 3em;
+            margin-bottom: 1em;
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .social-icons a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background-color: var(--secondary-bg);
+            border: 2px solid var(--border-color);
+            transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+            box-shadow: 0 0 15px rgba(0,0,0,0.3);
+        }
+
+        .social-icons a:hover {
+            transform: translateY(-5px) scale(1.05);
+            background-color: var(--accent-color);
+            border-color: var(--accent-color);
+            box-shadow: 0 8px 25px rgba(0, 240, 255, 0.5);
+        }
+
+        .social-icons svg {
+            width: 35px;
+            height: 35px;
+            fill: var(--text-color);
+            transition: fill 0.3s ease;
+        }
+
+        .social-icons a:hover svg {
+            fill: var(--primary-bg); /* Change icon color on hover */
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-bg);
+            color: var(--light-text-color);
+            text-align: center;
+            padding: 30px 20px;
+            border-top: 1px solid var(--border-color);
+            font-size: 0.9em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            #hero h1 { font-size: 3.5em; }
+            #hero p { font-size: 1.3em; }
+            h2 { font-size: 2em; }
+            h3 { font-size: 1.7em; }
+
+            nav .nav-links {
+                display: none; /* Hide nav links on smaller screens, could add a hamburger menu */
+            }
+            nav {
+                justify-content: center; /* Center logo if nav links are hidden */
+            }
+            .lang-switcher {
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+            #about .about-content {
+                flex-direction: column;
+            }
+            #about .about-text, #about .about-features {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .roadmap-timeline::before {
+                left: 20px; /* Move timeline to left */
+                transform: translateX(0);
+            }
+            .roadmap-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .roadmap-item:nth-child(even) {
+                flex-direction: column; /* Ensure consistent direction */
+            }
+            .roadmap-item .timeline-dot {
+                left: 20px;
+                transform: translateX(-50%);
+            }
+            .roadmap-item .timeline-content {
+                width: calc(100% - 60px); /* Adjust width */
+                margin-left: 60px; /* Push content right of timeline */
+                margin-right: 0 !important; /* Override odd/even margins */
+            }
+            .roadmap-item:nth-child(odd) .timeline-content {
+                margin-right: 0;
+            }
+            .roadmap-item:nth-child(even) .timeline-content {
+                margin-left: 60px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            section {
+                padding: 60px 15px;
+            }
+            #hero h1 { font-size: 2.8em; }
+            #hero p { font-size: 1.1em; }
+            h2 { font-size: 1.8em; }
+            h3 { font-size: 1.5em; }
+            .btn {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+            .social-icons a {
+                width: 60px;
+                height: 60px;
+            }
+            .social-icons svg {
+                width: 30px;
+                height: 30px;
+            }
+            nav .logo img {
+                height: 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            #hero h1 { font-size: 2.2em; }
+            #hero p { font-size: 1em; }
+            h2 { font-size: 1.5em; }
+            h3 { font-size: 1.3em; }
+            .lang-switcher {
+                top: 15px;
+                right: 15px;
+            }
+            nav {
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="#hero">
+                    <img src="logo.png" alt="test2 Logo">
+                </a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" data-i18n="nav_about">About</a></li>
+                <li><a href="#tokenomics" data-i18n="nav_tokenomics">Tokenomics</a></li>
+                <li><a href="#roadmap" data-i18n="nav_roadmap">Roadmap</a></li>
+                <li><a href="#social-links" data-i18n="nav_social">Social</a></li>
+            </ul>
+            <div class="lang-switcher">
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="zh">简体中文</option>
+                </select>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h1 data-i18n="hero_title">test2</h1>
+            <p data-i18n="hero_brief">A utility token built on high-strength encryption logic, powering privacy computing, asset rights, and on-chain security audits.</p>
+            <a href="#" class="btn" data-i18n="hero_cta">Buy test2 Now</a>
+        </section>
+
+        <section id="about">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 data-i18n="about_title">About test2</h2>
+                    <p data-i18n="about_description_p1">test2 is a utility token built on high-strength encryption logic. As its logo suggests, the central diamond symbolizes an impregnable data fortress, while the surrounding circuits represent its efficient flow within automated smart contracts.</p>
+                    <p data-i18n="about_description_p2">CCT aims to provide the underlying driving force for privacy computing, asset rights confirmation, and on-chain security audits.</p>
+                </div>
+                <div class="about-features">
+                    <h3 data-i18n="about_features_title">Key Features</h3>
+                    <ul>
+                        <li data-i18n="feature_1">High-Strength Encryption Logic</li>
+                        <li data-i18n="feature_2">Privacy Computing</li>
+                        <li data-i18n="feature_3">Asset Rights Confirmation</li>
+                        <li data-i18n="feature_4">On-Chain Security Audits</li>
+                        <li data-i18n="feature_5">Efficient Smart Contract Integration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="tokenomics">
+            <h2 data-i18n="tokenomics_title">Tokenomics</h2>
+            <div class="token-info-grid">
+                <div class="token-info-item">
+                    <h3 data-i18n="token_symbol">Symbol</h3>
+                    <span>test2</span>
+                </div>
+                <div class="token-info-item">
+                    <h3 data-i18n="token_name">Name</h3>
+                    <span>test2</span>
+                </div>
+                <div class="token-info-item">
+                    <h3 data-i18n="token_total_supply">Total Supply</h3>
+                    <span>1,000,000,000</span>
+                </div>
+                <div class="token-info-item">
+                    <h3 data-i18n="token_buy_tax">Buy Tax</h3>
+                    <span>0%</span>
+                </div>
+                <div class="token-info-item">
+                    <h3 data-i18n="token_sell_tax">Sell Tax</h3>
+                    <span>0%</span>
+                </div>
+                <div class="token-info-item">
+                    <h3 data-i18n="token_chain">Chain</h3>
+                    <span>BSC</span>
+                </div>
+            </div>
+            <!-- Placeholder for more detailed distribution or chart -->
+            <p style="margin-top: 40px; color: var(--light-text-color);" data-i18n="tokenomics_disclaimer">Further details on token distribution and utility will be released soon.</p>
+        </section>
+
+        <section id="roadmap">
+            <h2 data-i18n="roadmap_title">Roadmap</h2>
+            <div class="roadmap-timeline">
+                <div class="roadmap-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="roadmap_q1_title">Q1 2024: Foundation & Launch</h3>
+                        <p data-i18n="roadmap_q1_description">Smart Contract Development & Audit, Website Launch, Community Building, Presale & Public Launch on BSC.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="roadmap_q2_title">Q2 2024: Expansion & Partnerships</h3>
+                        <p data-i18n="roadmap_q2_description">Strategic Partnerships, CEX Listings, Development of Privacy Computing SDK, Marketing Campaigns.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="roadmap_q3_title">Q3 2024: Ecosystem Development</h3>
+                        <p data-i18n="roadmap_q3_description">Launch of Asset Rights Confirmation Platform, Integration with dApps, Further Security Audits & Enhancements.</p>
+                    </div>
+                </div>
+                <div class="roadmap-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3 data-i18n="roadmap_q4_title">Q4 2024: Global Adoption & Innovation</h3>
+                        <p data-i18n="roadmap_q4_description">Global Marketing & Community Expansion, Research & Development for Quantum-Resistant Encryption, New Use Cases.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="social-links">
+            <h2 data-i18n="social_title">Join Our Community</h2>
+            <p data-i18n="social_description">Connect with us on our official channels to stay updated on test2 development and news.</p>
+            <div class="social-icons">
+                <a href="https://t.me/CryptoCastleOfficial" target="_blank" aria-label="Join our Telegram" title="Telegram">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm6.27 8.295l-2.68 12.51c-.245 1.14-1.04 1.42-1.81.99l-4.07-3.01-1.95 1.88c-.21.2-.38.37-.76.37l.26-4.14 7.5-6.78c.33-.3.07-.47-.4-.15l-9.2 5.76-3.95-1.23c-1.12-.35-1.14-1.12.24-1.66l14.5-5.63c.93-.36 1.73-.09 1.73.91z"/>
+                    </svg>
+                </a>
+                <a href="https://twitter.com/CryptoCastleHQ" target="_blank" aria-label="Follow us on Twitter" title="Twitter">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26L21.61 21.75H18.93L12.98 14.07L7.47 21.75H3.88L10.94 13.14L3.01 2.25H6.29L11.35 9.14L18.244 2.25ZM17.006 19.23L18.71 21H19.83L6.11 3H4.91L6.71 2.25H8.41L17.006 19.23Z"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-i18n="footer_copyright">&copy; 2024 test2. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const translations = {
+            en: {
+                // SEO & OpenGraph
+                seo_title: "test2 - Futuristic Web3 Launchpad",
+                seo_description: "test2 is a utility token built on high-strength encryption logic, powering privacy computing, asset rights, and on-chain security audits.",
+                og_title: "test2 - Futuristic Web3 Launchpad",
+                og_description: "test2 is a utility token built on high-strength encryption logic, powering privacy computing, asset rights, and on-chain security audits.",
+                twitter_title: "test2 - Futuristic Web3 Launchpad",
+                twitter_description: "test2 is a utility token built on high-strength encryption logic, powering privacy computing, asset rights, and on-chain security audits.",
+
+                // Navigation
+                nav_about: "About",
+                nav_tokenomics: "Tokenomics",
+                nav_roadmap: "Roadmap",
+                nav_social: "Social",
+
+                // Hero Section
+                hero_title: "test2",
+                hero_brief: "A utility token built on high-strength encryption logic, powering privacy computing, asset rights, and on-chain security audits.",
+                hero_cta: "Buy test2 Now",
+
+                // About Section
+                about_title: "About test2",
+                about_description_p1: "test2 is a utility token built on high-strength encryption logic. As its logo suggests, the central diamond symbolizes an impregnable data fortress, while the surrounding circuits represent its efficient flow within automated smart contracts.",
+                about_description_p2: "CCT aims to provide the underlying driving force for privacy computing, asset rights confirmation, and on-chain security audits.",
+                about_features_title: "Key Features",
+                feature_1: "High-Strength Encryption Logic",
+                feature_2: "Privacy Computing",
+                feature_3: "Asset Rights Confirmation",
+                feature_4: "On-Chain Security Audits",
+                feature_5: "Efficient Smart Contract Integration",
+
+                // Tokenomics Section
+                tokenomics_title: "Tokenomics",
+                token_symbol: "Symbol",
+                token_name: "Name",
+                token_total_supply: "Total Supply",
+                token_buy_tax: "Buy Tax",
+                token_sell_tax: "Sell Tax",
+                token_chain: "Chain",
+                tokenomics_disclaimer: "Further details on token distribution and utility will be released soon.",
+
+                // Roadmap Section
+                roadmap_title: "Roadmap",
+                roadmap_q1_title: "Q1 2024: Foundation & Launch",
+                roadmap_q1_description: "Smart Contract Development & Audit, Website Launch, Community Building, Presale & Public Launch on BSC.",
+                roadmap_q2_title: "Q2 2024: Expansion & Partnerships",
+                roadmap_q2_description: "Strategic Partnerships, CEX Listings, Development of Privacy Computing SDK, Marketing Campaigns.",
+                roadmap_q3_title: "Q3 2024: Ecosystem Development",
+                roadmap_q3_description: "Launch of Asset Rights Confirmation Platform, Integration with dApps, Further Security Audits & Enhancements.",
+                roadmap_q4_title: "Q4 2024: Global Adoption & Innovation",
+                roadmap_q4_description: "Global Marketing & Community Expansion, Research & Development for Quantum-Resistant Encryption, New Use Cases.",
+
+                // Social Links Section
+                social_title: "Join Our Community",
+                social_description: "Connect with us on our official channels to stay updated on test2 development and news.",
+
+                // Footer
+                footer_copyright: "&copy; 2024 test2. All rights reserved."
+            },
+            zh: {
+                // SEO & OpenGraph
+                seo_title: "test2 - 未来主义 Web3 启动平台",
+                seo_description: "test2 是一种基于高强度加密逻辑构建的实用型代币，为隐私计算、资产确权及链上安全审计提供底层驱动力。",
+                og_title: "test2 - 未来主义 Web3 启动平台",
+                og_description: "test2 是一种基于高强度加密逻辑构建的实用型代币，为隐私计算、资产确权及链上安全审计提供底层驱动力。",
+                twitter_title: "test2 - 未来主义 Web3 启动平台",
+                twitter_description: "test2 是一种基于高强度加密逻辑构建的实用型代币，为隐私计算、资产确权及链上安全审计提供底层驱动力。",
+
+                // Navigation
+                nav_about: "关于",
+                nav_tokenomics: "代币经济学",
+                nav_roadmap: "路线图",
+                nav_social: "社区",
+
+                // Hero Section
+                hero_title: "test2",
+                hero_brief: "CCT 是一种基于高强度加密逻辑构建的实用型代币，旨在为隐私计算、资产确权及链上安全审计提供底层驱动力。",
+                hero_cta: "立即购买 test2",
+
+                // About Section
+                about_title: "关于 test2",
+                about_description_p1: "test2 是一种基于高强度加密逻辑构建的实用型代币。正如其 Logo 所示，核心的钻石象征着不可攻破的数据堡垒，周围的电路则代表了其在自动化智能合约中的流转效率。",
+                about_description_p2: "CCT 旨在为隐私计算、资产确权及链上安全审计提供底层驱动力。",
+                about_features_title: "主要特点",
+                feature_1: "高强度加密逻辑",
+                feature_2: "隐私计算",
+                feature_3: "资产确权",
+                feature_4: "链上安全审计",
+                feature_5: "高效智能合约集成",
+
+                // Tokenomics Section
+                tokenomics_title: "代币经济学",
+                token_symbol: "代币符号",
+                token_name: "代币名称",
+                token_total_supply: "总供应量",
+                token_buy_tax: "买入税",
+                token_sell_tax: "卖出税",
+                token_chain: "链",
+                tokenomics_disclaimer: "代币分配和效用详情将很快发布。",
+
+                // Roadmap Section
+                roadmap_title: "路线图",
+                roadmap_q1_title: "2024年第一季度：基础与启动",
+                roadmap_q1_description: "智能合约开发与审计，网站上线，社区建设，BSC 预售与公开发布。",
+                roadmap_q2_title: "2024年第二季度：扩展与合作",
+                roadmap_q2_description: "战略合作，CEX 上市，隐私计算 SDK 开发，市场推广活动。",
+                roadmap_q3_title: "2024年第三季度：生态系统发展",
+                roadmap_q3_description: "资产确权平台上线，与 dApps 集成，进一步安全审计与增强。",
+                roadmap_q4_title: "2024年第四季度：全球采纳与创新",
+                roadmap_q4_description: "全球市场推广与社区扩展，抗量子加密技术研发，新用例探索。",
+
+                // Social Links Section
+                social_title: "加入我们的社区",
+                social_description: "通过我们的官方渠道与我们联系，获取 test2 开发和新闻的最新动态。",
+
+                // Footer
+                footer_copyright: "&copy; 2024 test2. 版权所有。"
+            }
+        };
+
+        const languageSelect = document.getElementById('language-select');
+
+        function setLanguage(lang) {
+            const currentTranslations = translations[lang];
+            if (!currentTranslations) return;
+
+            // Update all elements with data-i18n attribute
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                if (currentTranslations[key]) {
+                    // Handle specific cases like meta tags
+                    if (element.tagName === 'META') {
+                        if (element.getAttribute('name') === 'description' || element.getAttribute('property') === 'og:description' || element.getAttribute('name') === 'twitter:description') {
+                            element.setAttribute('content', currentTranslations[key]);
+                        } else if (element.getAttribute('property') === 'og:title' || element.getAttribute('name') === 'twitter:title') {
+                            element.setAttribute('content', currentTranslations[key]);
+                        }
+                    } else if (element.tagName === 'TITLE') {
+                        element.textContent = currentTranslations[key];
+                    } else {
+                        element.innerHTML = currentTranslations[key]; // Use innerHTML for potential HTML entities like &copy;
+                    }
+                }
+            });
+
+            // Update the lang attribute of the html tag
+            document.documentElement.lang = lang;
+
+            // Store selected language in localStorage
+            localStorage.setItem('selectedLanguage', lang);
+        }
+
+        // Event listener for language change
+        languageSelect.addEventListener('change', (event) => {
+            setLanguage(event.target.value);
+        });
+
+        // Load language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLanguage = localStorage.getItem('selectedLanguage') || 'en'; // Default to English
+            languageSelect.value = savedLanguage;
+            setLanguage(savedLanguage);
+        });
+    </script>
+</body>
+</html>
